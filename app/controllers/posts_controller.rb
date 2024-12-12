@@ -1,12 +1,17 @@
 # frozen_string_literal: true
 
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[show edit update destroy]
+  #before_action :set_post, only: %i[show edit update destroy]
 
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    puts 'index'
+    #@posts = Post.all
+  end
+
+  def clicked
+    puts 'foo'
   end
 
   # GET /posts/1
@@ -15,6 +20,7 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
+    puts 'new'
     @post = Post.new
   end
 
@@ -24,6 +30,7 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
+    puts 'create'
     @post = Post.new(post_params)
 
     respond_to do |format|
