@@ -3,7 +3,9 @@
 require 'rails_helper'
 
 RSpec.describe 'welcome/new.html.erb', type: :view do
-  render
+  it "has the correct button" do
+    render
 
-  expect(rendered).to match "This is some other text"
+    expect(rendered).to match 'This is some other text'
+  end
 end
